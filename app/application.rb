@@ -25,7 +25,7 @@ class Application
       #item = handle_search(search_term)
       resp.write "added #{item}\n"
       if @@items.include?(item)
-        @@cart << "added #{item}"
+        @@cart << "#{item}"
       else
         resp.write "We don't have that item"
       end
