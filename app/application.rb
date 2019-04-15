@@ -23,9 +23,9 @@ class Application
     elsif req.path.match(/add/)
       search_term = req.params["item"]
       #item = handle_search(search_term)
-      #resp.write "#{item}\n"
-      if @@items.include?(search_term)
-        @@cart << "added #{search_term}"
+      resp.write "added #{item}\n"
+      if @@items.include?(item)
+        @@cart << "added #{item}"
       else
         resp.write "We don't have that item"
       end
